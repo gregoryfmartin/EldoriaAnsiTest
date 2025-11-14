@@ -331,6 +331,6 @@ let main argv =
     let b_atstring = aes_generate_atstring a_atstring "OMAE WA MOU SHINDIERU!" true
     printf $"{b_atstring}{aes_generate_coordinate_string 30 1}"
 
-    printf $"{aes_generate_coordinate_string 7 30}\x1b#6Weird{aes_decoration_reset}{aes_generate_coordinate_string 40 1}"
+    printf $"{aes_generate_coordinate_string 7 30}Hi \x1b#6DiScOrD{aes_decoration_reset}{aes_generate_coordinate_string 40 1}"
 
     0
