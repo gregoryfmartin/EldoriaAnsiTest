@@ -1,5 +1,7 @@
 module Ansi
 
+open Colors
+
 
 
 
@@ -78,3 +80,32 @@ let aes_generate_atstring_composite (atstrings: (unit -> string) list) =
     atstrings
     |> List.map (fun f -> f())
     |> String.concat ""
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// ALIASES FOR INTERPOLATION SHORTHAND
+//
+///////////////////////////////////////////////////////////////////////////////
+let f_red          = aes_generate_fg_string cc_red
+let f_green        = aes_generate_fg_string cc_green
+let f_blue         = aes_generate_fg_string cc_blue
+let f_black        = aes_generate_fg_string cc_black
+let f_white        = aes_generate_fg_string cc_white
+let f_yellow       = aes_generate_fg_string cc_yellow
+let f_forest_green = aes_generate_fg_string cc_apple_green_dark
+let f_brown_dark   = aes_generate_fg_string cc_apple_brown_dark
+let b_red          = aes_generate_bg_string cc_red
+let b_green        = aes_generate_bg_string cc_green
+let b_blue         = aes_generate_bg_string cc_blue
+let b_black        = aes_generate_bg_string cc_black
+let b_white        = aes_generate_bg_string cc_white
+let b_yellow       = aes_generate_bg_string cc_yellow
+let b_forest_green = aes_generate_bg_string cc_apple_green_dark
+let b_brown_dark   = aes_generate_bg_string cc_apple_brown_dark
+let deco_all       = aes_generate_decorator_string true true true true
+let deco_reset     = aes_decoration_reset
